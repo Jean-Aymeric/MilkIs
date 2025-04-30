@@ -25,6 +25,42 @@ public class MilkBottle {
         this.flavor = flavor;
     }
 
+    public String getExpirationDate() {
+        return this.expirationDate;
+    }
+
+    public int getVolume() {
+        return this.volume;
+    }
+
+    public Country getCountry() {
+        return this.country;
+    }
+
+    public String getBrand() {
+        return this.brand;
+    }
+
+    public MilkType getType() {
+        return this.type;
+    }
+
+    public boolean isBio() {
+        return this.bio;
+    }
+
+    public boolean isLactoseFree() {
+        return this.lactoseFree;
+    }
+
+    public double getFatRate() {
+        return this.fatRate;
+    }
+
+    public Flavor getFlavor() {
+        return this.flavor;
+    }
+
     public boolean is(final String date, final String s, final String france, final String s1) {
         return false;
     }

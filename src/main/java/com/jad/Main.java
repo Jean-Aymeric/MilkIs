@@ -18,9 +18,9 @@ public class Main {
                 0.5,
                 Flavor.ORIGINAL);
 
-                System.out.println(myMilk.is("2025-12-31",
-                                             "Vol=1",
-                                             "FRANCE",
-                                             "Brand=Envia"));
+        System.out.println(myMilk.is("date=2025-12-31",
+                                     "Vol=1",
+                                     "FRANCE",
+                                     "Brand=Envia"));
     }
 }
