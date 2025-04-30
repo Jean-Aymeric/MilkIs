@@ -24,4 +24,8 @@ public class MilkBottle {
         this.fatRate = fatRate;
         this.flavor = flavor;
     }
+
+    public boolean is(final String date, final String s, final String france, final String s1) {
+        return false;
+    }
 }
