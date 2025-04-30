@@ -1,6 +1,6 @@
 package com.jad.milk;
 
-public sealed abstract class MilkPropertyHandler
+sealed abstract class MilkPropertyHandler
         permits MilkPropertyHandler.ExpirationDateHandler {
     private final CanHandleExecutor canHandle;
     private final ProcessExecutor process;
@@ -29,16 +29,16 @@ public sealed abstract class MilkPropertyHandler
     }
 
     @FunctionalInterface
-    private interface CanHandleExecutor {
+    interface CanHandleExecutor {
         boolean execute(MilkBottle milkBottle, Criteria criteria);
     }
 
     @FunctionalInterface
-    private interface ProcessExecutor {
+    interface ProcessExecutor {
         boolean execute(MilkBottle milkBottle, Criteria criteria);
     }
 
-    private final class ExpirationDateHandler extends MilkPropertyHandler {
+    static final class ExpirationDateHandler extends MilkPropertyHandler {
         private ExpirationDateHandler() {
             super((milkBottle, criteria) -> criteria.key().equals("date"),
                   (milkBottle, criteria) -> criteria.value().equals(milkBottle.getExpirationDate()));
